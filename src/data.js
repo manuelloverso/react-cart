@@ -2,6 +2,7 @@ const pizzas = [
   {
     id: 1,
     name: "Margherita",
+    src: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg",
     ingredients: ["Tomato", "Mozzarella", "Basil"],
     price: 5.0,
     photo: null,
@@ -9,7 +10,8 @@ const pizzas = [
   },
   {
     id: 2,
-    name: "Pepperoni",
+    name: "Peperoni",
+    src: "https://media-assets.lacucinaitaliana.it/photos/620fbf8588f5a214a3ad3e4b/3:2/w_1500,h_1000,c_limit/pizza-con-peperoni-olive-e-capperi.jpg",
     ingredients: ["Tomato", "Mozzarella", "Pepperoni"],
     price: 6.5,
     photo: null,
@@ -18,6 +20,7 @@ const pizzas = [
   {
     id: 3,
     name: "Quattro Stagioni",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz3IK2Dfn3J2VGn37NF_M2Hes4NiDMg6BX1Q&s",
     ingredients: [
       "Tomato",
       "Mozzarella",
@@ -33,6 +36,7 @@ const pizzas = [
   {
     id: 4,
     name: "Capricciosa",
+    src: "https://i0.wp.com/pizzabelga.com/wp-content/uploads/2018/12/capricciosa.jpg?fit=500%2C500&ssl=1",
     ingredients: ["Tomato", "Mozzarella", "Mushrooms", "Artichokes", "Ham"],
     price: 6.5,
     photo: null,
@@ -41,6 +45,7 @@ const pizzas = [
   {
     id: 5,
     name: "Vegetariana",
+    src: "https://blog.giallozafferano.it/lericettediamanda/wp-content/uploads/2020/10/IMG_20201003_191155-1-320x303.jpg",
     ingredients: [
       "Tomato",
       "Mozzarella",
@@ -55,6 +60,7 @@ const pizzas = [
   {
     id: 6,
     name: "Hawaiian",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3BGhAo0XafbG5hyqObLM4YgnqRzS0IVuhjw&s",
     ingredients: ["Tomato", "Mozzarella", "Ham", "Pineapple"],
     price: 6.5,
     photo: null,
@@ -63,6 +69,7 @@ const pizzas = [
   {
     id: 7,
     name: "Diavola",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJD7d-vffjYpqwW8tDesDtxNqLecdFEBCrIg&s",
     ingredients: ["Tomato", "Mozzarella", "Spicy Salami"],
     price: 6.0,
     photo: null,
@@ -71,6 +78,7 @@ const pizzas = [
   {
     id: 8,
     name: "Quattro Formaggi",
+    src: "https://www.italianstylecooking.net/wp-content/uploads/2020/04/Pizza-quattro-formaggi-neu.jpg",
     ingredients: ["Tomato", "Mozzarella", "Parmesan", "Gorgonzola", "Fontina"],
     price: 7.5,
     photo: null,
@@ -79,6 +87,7 @@ const pizzas = [
   {
     id: 9,
     name: "Frutti di Mare",
+    src: "https://i2.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/08/3238_Pizza-1.jpg?resize=895%2C616&ssl=1",
     ingredients: ["Tomato", "Mozzarella", "Mixed Seafood"],
     price: 8.0,
     photo: null,
@@ -87,6 +96,7 @@ const pizzas = [
   {
     id: 10,
     name: "Prosciutto e Funghi",
+    src: "https://redketchup.it/wp-content/uploads/2024/03/pizza-con-prosciutto-e-funghi.webp",
     ingredients: ["Tomato", "Mozzarella", "Ham", "Mushrooms"],
     price: 6.5,
     photo: null,
