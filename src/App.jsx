@@ -15,7 +15,7 @@ function App() {
       </main>
 
       {/* Site Footer */}
-      <Footer />
+      {/*  <Footer /> */}
     </div>
   );
 }

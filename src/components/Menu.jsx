@@ -32,7 +32,6 @@ export default function Menu() {
       })
       .filter((i) => i.quantity > 0);
     setCartItems(newCart);
-    console.log(cartItems);
   }
 
   function emptyCart() {
