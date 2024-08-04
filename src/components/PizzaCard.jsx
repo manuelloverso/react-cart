@@ -1,7 +1,12 @@
-import { useState } from "react";
-
-export default function PizzaCard({ pizzaObj }) {
-  const [quantity, setQuantity] = useState(0);
+export default function PizzaCard({
+  pizzaObj,
+  addItem,
+  cartItems,
+  removeItem,
+}) {
+  /* const [quantity, setQuantity] = useState(0); */
+  const cartItem = cartItems.find((i) => i.id === pizzaObj.id);
+  const quantity = cartItem ? cartItem.quantity : 0;
 
   const ingredients = pizzaObj.ingredients.map((ingredient) => (
     <li key={ingredient} className="p-1.5 text-white bg-orange-800 rounded-md">
@@ -9,7 +14,7 @@ export default function PizzaCard({ pizzaObj }) {
     </li>
   ));
 
-  function increseQuantity() {
+  /* function increseQuantity() {
     setQuantity(quantity + 1);
   }
 
@@ -17,7 +22,7 @@ export default function PizzaCard({ pizzaObj }) {
     if (quantity > 0) {
       setQuantity(quantity - 1);
     }
-  }
+  } */
   return (
     <div className="pizza-card bg-yellow-400 h-full p-4 rounded-lg text-amber-900">
       <img
@@ -34,7 +39,7 @@ export default function PizzaCard({ pizzaObj }) {
       <div className="actions flex gap-x-2 items-center">
         <button
           className="p-1.5 text-yellow-400 bg-orange-800 rounded-md"
-          onClick={increseQuantity}
+          onClick={() => addItem(pizzaObj)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +62,7 @@ export default function PizzaCard({ pizzaObj }) {
 
             <button
               className="p-1.5 text-yellow-400 bg-orange-800 rounded-md"
-              onClick={decreaseQuantity}
+              onClick={() => removeItem(pizzaObj)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
