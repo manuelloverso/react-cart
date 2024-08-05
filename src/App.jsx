@@ -1,6 +1,6 @@
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
+import "./assets/style/animations.css";
 
 function App() {
   return (

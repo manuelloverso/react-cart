@@ -51,7 +51,9 @@ export default function Menu() {
   return (
     <main>
       <div className="menu">
-        <h3 className="text-center  text-4xl mb-8">Have a look at our menu</h3>
+        <h3 className="text-center  text-4xl mb-8 tracking-in-expand-fwd">
+          Have a look at our menu
+        </h3>
 
         <div className="products-cart flex  flex-wrap">
           <ul className="w-full order-last md:order-none md:w-1/2 lg:w-2/3 flex flex-wrap gap-y-6">

@@ -11,9 +11,3 @@
 - How to work with useState hook to re-render the DOM when the user interacts
 - How to share state variables and other between components with props
 - I also used for the first time Tailwind CSS
-
-### TODOS
-
-- make it responsive
-- add hover effects
-- add some animations (maybe)

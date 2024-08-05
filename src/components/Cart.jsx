@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
   function getTotal() {
     let total = 0;
@@ -8,7 +9,7 @@ export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
   }
 
   return (
-    <div className=" w-full md:w-1/2 lg:w-1/3 p-3">
+    <div className=" flip-in-hor-bottom w-full md:w-1/2 lg:w-1/3 p-3">
       <div className="cart bg-yellow-400 p-4 rounded-lg text-amber-900">
         {cartItems.length == 0 ? (
           <div className="min-h-40 flex items-center justify-center">
@@ -22,14 +23,20 @@ export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
               <h3 className="text-2xl ">Your Order:</h3>
               <button
                 onClick={emptyCart}
-                className="bg-red-600 text-white rounded-lg p-3"
+                className="bg-red-600 text-white rounded-lg p-3 hover:bg-red-800 transition-colors"
               >
                 Empty cart
               </button>
             </div>
             <ul className="mb-3">
               {cartItems.map((item) => (
-                <li
+                <motion.li
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 1,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
                   className="flex items-center justify-between mb-2"
                   key={item.id}
                 >
@@ -41,7 +48,7 @@ export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
                   <div className="flex items-center gap-x-2">
                     <span>{item.quantity}x</span>
                     <button
-                      className="p-1.5 text-yellow-400 bg-orange-800 rounded-md"
+                      className="p-1.5 text-yellow-400 bg-orange-800 rounded-md hover:bg-white hover:text-orange-800 transition-colors"
                       onClick={() => addItem(item)}
                     >
                       <svg
@@ -61,7 +68,7 @@ export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
                     </button>
 
                     <button
-                      className="p-1.5 text-yellow-400 bg-orange-800 rounded-md"
+                      className="p-1.5 text-yellow-400 bg-orange-800 rounded-md hover:bg-white hover:text-orange-800 transition-colors"
                       onClick={() => removeItem(item)}
                     >
                       <svg
@@ -80,7 +87,7 @@ export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
                       </svg>
                     </button>
                   </div>
-                </li>
+                </motion.li>
               ))}
             </ul>
 
