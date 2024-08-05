@@ -4,7 +4,7 @@ import Menu from "./components/Menu";
 
 function App() {
   return (
-    <div className="container mx-auto px-20">
+    <div className="container mx-auto px-4 ">
       {/* Site Header */}
       <Header />
 

@@ -39,7 +39,7 @@ export default function Menu() {
   }
 
   const pizzaItems = pizzas.map((pizza) => (
-    <li className="w-1/3 p-4" key={pizza.id}>
+    <li className="w-full sm:w-1/2 md:w-full lg:w-1/3 p-4" key={pizza.id}>
       <PizzaCard
         pizzaObj={pizza}
         addItem={addItem}
@@ -51,10 +51,12 @@ export default function Menu() {
   return (
     <main>
       <div className="menu">
-        <h3 className="text-center  text-4xl mb-8">Have a look to our menu</h3>
+        <h3 className="text-center  text-4xl mb-8">Have a look at our menu</h3>
 
-        <div className="products-cart flex gap-x-6">
-          <ul className="w-2/3 flex flex-wrap gap-y-6">{pizzaItems}</ul>
+        <div className="products-cart flex  flex-wrap">
+          <ul className="w-full order-last md:order-none md:w-1/2 lg:w-2/3 flex flex-wrap gap-y-6">
+            {pizzaItems}
+          </ul>
 
           <Cart
             cartItems={cartItems}

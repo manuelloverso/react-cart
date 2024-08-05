@@ -4,30 +4,23 @@ export default function PizzaCard({
   cartItems,
   removeItem,
 }) {
-  /* const [quantity, setQuantity] = useState(0); */
   const cartItem = cartItems.find((i) => i.id === pizzaObj.id);
   const quantity = cartItem ? cartItem.quantity : 0;
 
   const ingredients = pizzaObj.ingredients.map((ingredient) => (
-    <li key={ingredient} className="p-1.5 text-white bg-orange-800 rounded-md">
+    <li
+      key={ingredient}
+      className="hover:bg-white hover:text-orange-800 transition-colors p-1.5 text-white bg-orange-800 rounded-md"
+    >
       {ingredient}
     </li>
   ));
 
-  /* function increseQuantity() {
-    setQuantity(quantity + 1);
-  }
-
-  function decreaseQuantity() {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
-  } */
   return (
-    <div className="pizza-card bg-yellow-400 h-full p-4 rounded-lg text-amber-900 flex justify-between flex-col">
+    <div className="group pizza-card bg-yellow-400 h-full p-4 rounded-lg text-amber-900 flex justify-between flex-col">
       <div>
         <img
-          className="w-full object-cover rounded-md mb-4"
+          className="w-full object-cover rounded-md mb-4 group-hover:scale-105 transition-transform"
           style={{ aspectRatio: "16/11" }}
           src={pizzaObj.src}
           alt={pizzaObj.name}
@@ -43,7 +36,7 @@ export default function PizzaCard({
         </span>
         <div className="actions flex gap-x-2 items-center">
           <button
-            className="p-1.5 text-yellow-400 bg-orange-800 rounded-md"
+            className="p-1.5 text-yellow-400 bg-orange-800 rounded-md hover:bg-white hover:text-orange-800 transition-colors"
             onClick={() => addItem(pizzaObj)}
           >
             <svg
@@ -66,7 +59,7 @@ export default function PizzaCard({
               <span>{quantity}</span>
 
               <button
-                className="p-1.5 text-yellow-400 bg-orange-800 rounded-md"
+                className="p-1.5 text-yellow-400 bg-orange-800 rounded-md hover:bg-white hover:text-orange-800 transition-colors"
                 onClick={() => removeItem(pizzaObj)}
               >
                 <svg

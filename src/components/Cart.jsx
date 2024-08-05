@@ -8,11 +8,13 @@ export default function Cart({ cartItems, removeItem, addItem, emptyCart }) {
   }
 
   return (
-    <div className="grow p-3">
+    <div className=" w-full md:w-1/2 lg:w-1/3 p-3">
       <div className="cart bg-yellow-400 p-4 rounded-lg text-amber-900">
         {cartItems.length == 0 ? (
           <div className="min-h-40 flex items-center justify-center">
-            <h4 className="text-center text-lg">Your cart is empty</h4>
+            <h4 className="text-center text-2xl font-medium">
+              Your cart is empty
+            </h4>
           </div>
         ) : (
           <>
